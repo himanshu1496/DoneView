@@ -58,7 +58,7 @@ public class DoneView extends View {
         mIconPaint.setStrokeCap(Paint.Cap.ROUND);
         mIconPaint.setStrokeJoin(Paint.Join.ROUND);
 
-        mIconPadding = array.getDimension(R.styleable.DoneView_iconPadding, 80);
+        mIconPadding = array.getDimension(R.styleable.DoneView_iconPadding, 20);
         mRepeatCount = array.getInteger(R.styleable.DoneView_repeatCount, -1);
         array.recycle();
     }

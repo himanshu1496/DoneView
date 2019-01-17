@@ -9,13 +9,13 @@
 
     <com.himanshubaghel.dev.doneview.DoneView
         android:id="@+id/done_view"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         app:circleStrokeColor="@color/colorPrimary"
         app:iconStrokeColor="@color/colorAccent"
         app:circleStrokeWidth="2dp"
         app:iconStrokeWidth="2dp"
-        app:iconPadding="10dp"
+        app:iconPadding="20dp"
         app:repeatCount="2"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -38,6 +38,8 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="16dp"
         android:text="@string/label_start_animation"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/stop_button"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,6 +54,8 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:text="@string/label_stop_animation"
+        android:textColor="@color/white"
+        android:background="@drawable/button_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/start_button" />
