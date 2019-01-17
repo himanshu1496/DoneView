@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DoneView">
+        <attr name="circleStrokeColor" format="color" />
+        <attr name="iconStrokeColor" format="color" />
+        <attr name="circleStrokeWidth" format="dimension" />
+        <attr name="iconStrokeWidth" format="dimension" />
+        <attr name="iconPadding" format="dimension" />
+        <attr name="repeatCount" format="integer" />
+    </declare-styleable>
+</resources>
