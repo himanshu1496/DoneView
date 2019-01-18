@@ -10,13 +10,7 @@ A view which can be used to show a task completion. The view comes with lot of c
 USAGE
 -----
 
-Just add DoneView in your layout XML and DoneView library in your project via Gradle:
 
-```gradle
-dependencies {
-  implementation 'com.bitvale:lightprogress:1.0.0'
-}
-```
 
 XML
 -----
