@@ -1,4 +1,4 @@
-package com.himanshubaghel.dev.doneview;
+package io.github.himanshu1496.doneview;
 
 import android.animation.ValueAnimator;
 import android.content.Context;

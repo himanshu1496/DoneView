@@ -1,4 +1,4 @@
-package com.himanshubaghel.dev.doneviewsample;
+package io.github.himanshu1496.doneviewsample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.himanshubaghel.dev.doneview.test", appContext.getPackageName());
+        assertEquals("com.himanshubaghel.dev.doneview", appContext.getPackageName());
     }
 }

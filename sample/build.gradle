@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.himanshubaghel.dev.doneviewsample"
+        applicationId "io.github.himanshu1496.doneviewsample"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1

@@ -1,4 +1,50 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+
+apply plugin: 'maven-publish'
+
+//and the dependency right after the maven-publish
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.0'
+    }
+}
+
+publish {
+
+    def groupProjectID = 'io.github.himanshu1496'
+    def artifactProjectID = 'DoneView'
+    def publishVersionID = '0.1.3'
+
+    userOrg = 'himanshu1496'
+    repoName = 'DoneView'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'A view which can be used to show a task completion. The view comes with lot of customization features'
+    website = 'https://github.com/himanshu1496/DoneView'
+
+    publishing {
+        publications {
+            MyPub(MavenPublication) {
+                groupId groupProjectID
+                artifactId artifactProjectID
+                version publishVersionID
+
+                //don't forget to add bundleRelease
+                artifact bundleReleaseAar
+
+            }
+        }
+    }
+
+    //Step 3: don't forget to add your custom publication
+    publications = ['MyPub']
+
+}
 
 android {
     compileSdkVersion 28
@@ -8,8 +54,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "0.1.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -22,6 +68,10 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {

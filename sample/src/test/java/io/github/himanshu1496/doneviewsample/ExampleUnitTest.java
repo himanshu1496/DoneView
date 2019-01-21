@@ -1,4 +1,4 @@
-package com.himanshubaghel.dev.doneviewsample;
+package io.github.himanshu1496.doneviewsample;
 
 import org.junit.Test;
 

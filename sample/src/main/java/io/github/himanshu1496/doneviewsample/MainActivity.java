@@ -1,11 +1,11 @@
-package com.himanshubaghel.dev.doneviewsample;
+package io.github.himanshu1496.doneviewsample;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.himanshubaghel.dev.doneview.DoneView;
+import io.github.himanshu1496.doneview.DoneView;
 
 public class MainActivity extends AppCompatActivity {
 
