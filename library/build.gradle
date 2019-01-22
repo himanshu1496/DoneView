@@ -15,7 +15,7 @@ buildscript {
 
 publish {
 
-    def groupProjectID = 'io.github.himanshu1496'
+    def groupProjectID = 'io.github.himanshu1496.doneView'
     def artifactProjectID = 'doneView'
     def publishVersionID = '0.1.0'
 
