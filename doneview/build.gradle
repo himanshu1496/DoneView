@@ -1,15 +1,14 @@
-apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
 
 apply plugin: 'maven-publish'
 
-//and the dependency right after the maven-publish
 buildscript {
     repositories {
         jcenter()
     }
     dependencies {
-        classpath 'com.novoda:bintray-release:0.8.0'
+        classpath 'com.novoda:bintray-release:0.9'
     }
 }
 
@@ -34,14 +33,12 @@ publish {
                 artifactId artifactProjectID
                 version publishVersionID
 
-                //don't forget to add bundleRelease
                 artifact bundleReleaseAar
 
             }
         }
     }
 
-    //Step 3: don't forget to add your custom publication
     publications = ['MyPub']
 
 }
