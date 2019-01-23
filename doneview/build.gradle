@@ -34,7 +34,8 @@ publish {
                 version publishVersionID
 
                 artifact bundleReleaseAar
-
+                artifact sourcesJar
+                artifact javadocJar
             }
         }
     }
@@ -42,6 +43,7 @@ publish {
     publications = ['MyPub']
 
 }
+
 
 android {
     compileSdkVersion 28
@@ -78,4 +80,19 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
 }
